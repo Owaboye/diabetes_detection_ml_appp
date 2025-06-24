@@ -15,6 +15,7 @@ The solution consists of:
 - Scales user inputs and provides real-time diabetes risk predictions.
 - Displays the predicted outcome with confidence level.
 - Interactive interface powered by Streamlit.
+- ![Correlation matrix for the feature selection]()
 
 ## Dataset
 This project is trained on the **Pima Indians Diabetes Dataset** containing features such as:
