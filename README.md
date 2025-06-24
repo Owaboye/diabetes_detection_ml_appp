@@ -15,7 +15,6 @@ The solution consists of:
 - Scales user inputs and provides real-time diabetes risk predictions.
 - Displays the predicted outcome with confidence level.
 - Interactive interface powered by Streamlit.
-- ![Correlation matrix for the feature selection]()
 
 ## Dataset
 This project is trained on the **Pima Indians Diabetes Dataset** containing features such as:
@@ -23,6 +22,10 @@ This project is trained on the **Pima Indians Diabetes Dataset** containing feat
 - BMI
 - Age
 - Pregnancies
+- Insulin
+- SkinThickness
+- DiabetesPedigreeFunction
+- BloodPressure
 
 You can obtain the dataset from [UCI Machine Learning Repository](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database?select=diabetes.csv).
 
@@ -30,6 +33,13 @@ You can obtain the dataset from [UCI Machine Learning Repository](https://www.ka
 - We can use correlation matrix to pick the most important feature
 - Correlation Matrix measure the linear relationship between the target and the feature
 - Helps visualize which features are strongly correlated with outcome
+![Correlation matrix for the feature selection](https://github.com/Owaboye/diabetes_detection_ml_appp/blob/main/correlation%20matrix%20for%20feature%20selection.png)
+
+## Features used for Model Training
+- Glucose
+- BMI
+- Age
+- Pregnancies
 
 ## Model Development
 1. **Preprocessing**: Features were scaled using `StandardScaler`.
@@ -37,3 +47,20 @@ You can obtain the dataset from [UCI Machine Learning Repository](https://www.ka
 3. **Evaluation**:
    - Accuracy: `~80%`
    - Confusion Matrix and metrics were calculated.
+
+## Streamlit Application
+Run the `stremlit_app_2.py` file to launch a local web app:
+```bash
+streamlit run stremlit_app_2.py
+```
+You will see:
+Input fields for Glucose, BMI, Age, Pregnancies.
+A "Prediction" button that returns:
+Diabetic or Not Diabetic
+Prediction confidence (probability score)
+
+## Installation & Usage
+- git clone https://github.com/Owaboye/diabetes_detection_ml_appp.git
+- cd diabetes-prediction-app
+- pip install -r requirements.txt
+- streamlit run stremlit_app_2.py
